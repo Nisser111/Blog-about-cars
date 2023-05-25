@@ -8,17 +8,17 @@
 }
 
 :root {
-    --dark-orange: #995A26; 
-    --orange: #E6812E;
     --main-blue: #2357E5;
-    --gold: #999114;
-    --yellow: #E6D917;
     --black: #111111;
     --light-grey-1: #ebebeb;
     --light-grey-2: #dedede;
-    --dark-with-alpha: hsla(0, 0%, 0%, 0.5);
     --light: #d8dbe0;
     --dark: #28292c;
+    /* menu colors */
+    --home: #3a3a3a;
+    --articles: #333333;
+    --about-us: #2e2e2e;
+    --contact: #292929;
 }
 
 body {
@@ -119,7 +119,22 @@ header {
 
 .select-menu .options .option .option-text {
   font-size: 1rem;
-  color: #333;
+}
+
+.select-menu .options .option:nth-child(1) {
+  color: var(--home);
+}
+
+.select-menu .options .option:nth-child(2) {
+  color: var(--articles);
+}
+
+.select-menu .options .option:nth-child(2) {
+  color: var(--about-us);
+}
+
+.select-menu .options .option:nth-child(2) {
+  color: var(--contact);
 }
 
 .select-btn i {
@@ -350,10 +365,11 @@ footer {
   padding: 7vh 10vw;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer section {
-  max-width: 25%;
+  max-width: 20vw;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -469,6 +485,19 @@ footer section a:hover {
   text-align: center;
 }
 
-/* @media screen and (max-width: 768px) {
-  main.all-categories .single-article
-} */
+@media screen and (max-width: 768px) {
+
+  main.all-categories .single-article {
+    width: 95%;
+  }
+
+  footer section {
+    max-width: none;
+    width: 50%;
+  }
+
+  footer section:nth-last-child(-n + 2) {
+    margin-top: 30px;
+  }
+  
+}
