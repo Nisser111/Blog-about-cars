@@ -19,7 +19,7 @@
                 CarSpotting<span>Blog</span>
             </div>
             <nav>
-                <div class="select-menu active">
+                <div class="select-menu ">
                     <div class="select-btn">
                       <span class="sBtn-text">HOME</span>
                       <i class="fa-solid fa-chevron-down"></i>
@@ -45,25 +45,69 @@
                     </ul>
                 </div>
             </nav>
-            <script src="dropdown-menu.js"></script>
-        </article>
-        <article class="hero-image">
+            
+          </article>
+          <article class="banner">
             <h1>Welcome to our blog</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ratione earum nemo pariatur<br>dolores voluptatibus quia sapiente dolor quos voluptatum.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ratione earum nemo pariatur<br>dolores voluptatibus quia sapiente dolor quos voluptatum.
             </p>
-            <button>READ MORE</button>
-        </article>
-
-        <article class="category-nav">
+            <button class="read-more-btn">READ MORE</button>
+          </article>
+          
+          <nav class="category-nav">
             <ul class="category-list">
-                <li class="category-list__item">Mercedes-Benz</li>
-                <li class="category-list__item">BMW</li>
-                <li class="category-list__item">Audi</li>
-                <li class="category-list__item">Porshe</li>
-                <li class="category-list__item">Lamborgini</li>
+              <li class="category-list__item"><a href="#">All</a></li>
+              <li class="category-list__item "><a href="#">Mercedes-Benz</a></li>
+              <li class="category-list__item"><a href="#">BMW</a></li>
+              <li class="category-list__item"><a href="#">Audi</a></li>
+              <li class="category-list__item"><a href="#">Porshe</a></li>
+              <li class="category-list__item"><a href="#">Lamborgini</a></li>
             </ul>
-        </article>
+          </nav>
     </header>
+
+    <main class="all-categories">
+      <article class="single-article">
+        <div class="img-zoom-effect"><img src="images/mercedes-amg-gt-black-series.jpg" alt="Mercedes AMG GT Black Series"></div>
+        <p class="single-article__added-date"><i class="fa-regular fa-calendar-days"></i> 17.02.2023</p>
+        <h3>Mercedes AMG GT Black Series spotted in Gdynia</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt provident iusto minima sunt aut dolores eum maiores. Est, rerum ad.</p>
+        <button class="read-more-btn">READ MORE</button>
+      </article>
+      
+      <article class="single-article">
+        <div class="img-zoom-effect"><img src="images/audi-rs7.jpg" alt="Audi RS7"></div>
+        <p class="single-article__added-date"><i class="fa-regular fa-calendar-days"></i> 02.03.2023</p>
+        <h3>Audi RS7 RoCars Maxton wide body spotted in Monaco</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt provident iusto minima sunt aut dolores eum maiores. Est, rerum ad.</p>
+        <button class="read-more-btn">READ MORE</button>
+      </article>
+
+      <article class="single-article">
+        <div class="img-zoom-effect"><img src="images/bmw-i8.jpg" alt="BMW i8"></div>
+        <p class="single-article__added-date"><i class="fa-regular fa-calendar-days"></i> 01.04.2023</p>
+        <h3>BMW I8 on Warsaw Night Race <br> COLD START VIDEO</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt provident iusto minima sunt aut dolores eum maiores. Est, rerum ad.</p>
+        <button class="read-more-btn">READ MORE</button>
+      </article>
+
+      <article class="single-article">
+        <div class="img-zoom-effect"><img src="images/porshe-911-turbo-s.jpg" alt="Porshe 911 Turbo S"></div>
+        <p class="single-article__added-date"><i class="fa-regular fa-calendar-days"></i> 10.04.2023</p>
+        <h3>Black Porshe 911 Turbo S spotted in Warsaw</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt provident iusto minima sunt aut dolores eum maiores. Est, rerum ad.</p>
+        <button class="read-more-btn">READ MORE</button>
+      </article>
+
+      <article class="single-article">
+        <div class="img-zoom-effect"><img src="images/lamborgini-aventador-s.jpg" alt="Lamborgini Aventador S"></div>
+        <p class="single-article__added-date"><i class="fa-regular fa-calendar-days"></i> 23.05.2023</p>
+        <h3>Mercedes AMG GT Black Series spotted in Gdynia</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt provident iusto minima sunt aut dolores eum maiores. Est, rerum ad.</p>
+        <button class="read-more-btn">READ MORE</button>
+      </article>
+    </main>
+    <script src="dropdown-menu.js"></script>
 </body>
 </html>
