@@ -294,7 +294,7 @@ main.all-categories {
 }
 
 /* single article */
-main.all-categories .single-article{
+main.all-categories .single-article {
   width: 45%;
   background-color: white;
   padding: 10px;
@@ -338,7 +338,137 @@ main.all-categories .single-article p {
   opacity: 0.8;
 }
 
- main.all-categories .single-article button {
+main.all-categories .single-article button {
   font-size: 0.9rem;
   margin-top: 1.4em;
 }
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: var(--black);
+  padding: 7vh 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer section {
+  max-width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.footer__logo {
+  position: relative;
+}
+
+.footer__logo div.logo {
+  margin-left: 0;
+  margin-top: -12px;
+}
+
+.footer__logo p::first-letter {
+  font-size: 1em;
+}
+
+.footer__logo p {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 1em;
+  opacity: .8;
+}
+
+/* Color mode switch */
+.toggle-switch {
+  width: 200px;
+  margin-top: 20px;
+  transform: scale(0.35);
+  position: relative;
+}
+
+.toggle-switch label {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: var(--dark);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: inset 28px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked ~ .slider::before {
+  transform: translateX(95px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
+
+footer section h4{
+  font-size: 1.3rem;
+  color: white;
+}
+
+footer section li {
+  list-style: none;
+  color: white;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+footer section ul:first-child {
+  margin-top: 22px;
+}
+
+footer section a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 1;
+  transition: opacity .8 ease;
+}
+
+footer section a:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.footer__contact ul li{
+  text-transform: none;
+}
+
+.footer__contact ul li i {
+  width: 30px;
+  text-align: center;
+}
+
+/* @media screen and (max-width: 768px) {
+  main.all-categories .single-article
+} */
