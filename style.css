@@ -578,6 +578,86 @@ main.contact form input[type="submit"]:focus{
   border-color: none;
 }
 
+/* about us page */
+main.about-us {
+  width: 60vw;
+  background-color: #fff;
+  padding: 2rem;
+  margin: 1vh auto 10vh auto;
+}
+
+main.about-us h2 {
+  font-size: 2rem;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+main.about-us p {
+  margin: 1.5em 0;
+}
+
+main.about-us h4 {
+  font-size: 1.4rem;
+  color: var(--main-blue);
+}
+
+main.about-us h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main.about-us .team{
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main.about-us .team article {
+  width: 33%;
+  background-color: var(--main-blue);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px;
+  color: #fff;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 13px -7px rgba(17, 17, 17, 1);
+  -moz-box-shadow: 0px 0px 13px -7px rgba(17, 17, 17, 1);
+  box-shadow: 0px 0px 13px -7px rgba(17, 17, 17, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main.about-us .team article:nth-child(1),
+main.about-us .team article:nth-child(4) {
+  width: 50%;
+}
+
+main.about-us .team article img {
+  width: 40%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+main.about-us .team article h5 {
+  font-size: 1rem;
+}
+
+main.about-us .team article p {
+  margin: 0;
+  margin-top: 5px;
+}
+
+main.about-us .team article p::first-letter {
+  font-size: 1em;
+}
+
 /* footer */
 footer {
   width: 100%;
@@ -665,7 +745,7 @@ footer section a:hover {
   footer section:nth-last-child(-n + 2) {
     margin-top: 30px;
   }
-  
+
   main.contact .contact-information,
   main.contact .formulage {
     width: 100%;
@@ -679,6 +759,25 @@ footer section a:hover {
 
   main.contact .contact-information .socials i{
     margin: 20px;
+  }
+
+  main.about-us .team {
+    flex-direction: column;
+  }
+
+  main.about-us .team article {
+    width: 70%;
+    align-self: flex-end;
+  }
+
+  main.about-us .team article:nth-child(1),
+  main.about-us .team article:nth-child(3) {
+    width: 70%;
+    align-self: flex-start;
+  }
+
+  main.about-us .team article:nth-child(4) {
+    width: 70%;
   }
 }
 
