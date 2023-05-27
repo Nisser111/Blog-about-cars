@@ -20,6 +20,8 @@
   --articles: #333333;
   --about-us: #2e2e2e;
   --contact: #292929;
+  --max-img-width: 600px;
+  --max-img-height: 400px;
 }
 
 body {
@@ -364,6 +366,10 @@ main.all-categories .single-article {
   margin: 10px;
 }
 
+main.all-categories .single-article a {
+  text-decoration: none;
+}
+
 main.all-categories .single-article img {
   width: 100%;
   height: 250px;
@@ -471,7 +477,7 @@ main.contact .contact-information ul li {
   align-items: center;
 }
 
-main.contact .contact-information ul li a{
+main.contact .contact-information ul li a {
   color: #fff;
   text-decoration: none;
   display: flex;
@@ -484,11 +490,11 @@ main.contact .contact-information ul li i {
   text-align: center;
 }
 
-main.contact .contact-information .socials i{
+main.contact .contact-information .socials i {
   margin: 80px 10px 0 10px;
   font-size: 1.7rem;
   justify-self: flex-end;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 main.contact .contact-information .socials i:hover {
@@ -496,7 +502,7 @@ main.contact .contact-information .socials i:hover {
   opacity: 0.8;
 }
 
-main.contact .contact-information .socials i:first-child{
+main.contact .contact-information .socials i:first-child {
   margin-left: 0;
 }
 
@@ -570,11 +576,11 @@ main.contact form input[type="submit"]:hover {
   cursor: pointer;
 }
 
-main.contact form input[type="submit"]:active{
+main.contact form input[type="submit"]:active {
   font-weight: 700;
 }
 
-main.contact form input[type="submit"]:focus{
+main.contact form input[type="submit"]:focus {
   border-color: none;
 }
 
@@ -607,7 +613,7 @@ main.about-us h3 {
   margin-bottom: 1rem;
 }
 
-main.about-us .team{
+main.about-us .team {
   background-color: #fff;
   padding: 30px;
   border-radius: 8px;
@@ -657,6 +663,91 @@ main.about-us .team article p {
 main.about-us .team article p::first-letter {
   font-size: 1em;
 }
+
+/* articles */
+main.articles {
+  width: 60vw;
+  background-color: #fff;
+  padding: 1.4rem;
+  margin: 5vh auto;
+}
+
+main.articles header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+main.articles header p {
+  max-width: 60%;
+  margin: 8px 0;
+  opacity: 0.8;
+}
+
+main.articles header p::first-letter {
+  font-size: 1em;
+}
+
+main.articles > p {
+  margin: 1rem 0;
+}
+
+main.articles img {
+  width: 60vw;
+  max-width: 100%;
+  vertical-align: top;
+  margin: 1.5rem 0;
+}
+
+main.articles h3 {
+  font-size: 1.7rem;
+  margin: 1.5rem 0 1rem 0;
+  text-align: center;
+}
+
+main.articles .video {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+}
+
+/* Inspiration by: https://codepen.io/Lubna/pen/MWapdjE */
+.gallery {
+  display: flex;
+  margin: 10px auto;
+  max-width: 600px;
+  position: relative;
+  padding-top: 66%;
+}
+
+.gallery__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery__thumb {
+  padding-top: 6px;
+  margin: 6px;
+  display: block;
+  cursor: pointer;
+}
+
+.gallery__selector {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.gallery__selector:checked + .gallery__img {
+  opacity: 1;
+}
+
+.gallery__selector:checked ~ .gallery__thumb > img {
+  box-shadow: 0 0 0 3px var(--main-blue);
+}
+
 
 /* footer */
 footer {
@@ -751,13 +842,13 @@ footer section a:hover {
     width: 100%;
   }
 
-  main.contact .contact-information .socials{
+  main.contact .contact-information .socials {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
   }
 
-  main.contact .contact-information .socials i{
+  main.contact .contact-information .socials i {
     margin: 20px;
   }
 
@@ -781,56 +872,9 @@ footer section a:hover {
   }
 }
 
-/* 
-.toggle-switch {
-  width: 200px;
-  margin-top: 20px;
-  transform: scale(0.35);
-  position: relative;
-}
 
-.toggle-switch label {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  background-color: var(--dark);
-  border-radius: 50px;
-  cursor: pointer;
+@media screen and (min-width: 600px) {
+  .gallery {
+    padding-top: 400px;
+  }
 }
-
-.toggle-switch input {
-  position: absolute;
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  transition: 0.3s;
-}
-
-.toggle-switch input:checked ~ .slider {
-  background-color: var(--light);
-}
-
-.slider::before {
-  content: "";
-  position: absolute;
-  top: 13px;
-  left: 16px;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  box-shadow: inset 28px -4px 0px 0px var(--light);
-  background-color: var(--dark);
-  transition: 0.3s;
-}
-
-.toggle-switch input:checked ~ .slider::before {
-  transform: translateX(95px);
-  background-color: var(--dark);
-  box-shadow: none;
-}
-*/
