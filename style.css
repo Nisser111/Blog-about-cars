@@ -823,6 +823,67 @@ footer section a:hover {
   text-align: center;
 }
 
+/* coockie alert */
+.coockie {
+  width: 100%;
+  background-color: var(--main-blue);
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coockie > span {
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coockie p {
+  color: #fff;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.coockie p::first-letter {
+  font-size: 1em;
+}
+
+.coockie p i {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.coockie button {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 1rem;
+  padding: 5px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.coockie button div {
+  transition: all .4s ease;
+}
+
+.coockie button:hover div{
+  transform: scale(1.1);
+}
+
+.coockie button:active div{
+  transform: scale(1);
+}
+
+
 @media screen and (max-width: 768px) {
   main.all-categories .single-article {
     width: 95%;
@@ -870,11 +931,12 @@ footer section a:hover {
   main.about-us .team article:nth-child(4) {
     width: 70%;
   }
-}
 
-
-@media screen and (min-width: 600px) {
   .gallery {
     padding-top: 400px;
+  }
+
+  main.articles .video {
+    width: 100%;
   }
 }
