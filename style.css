@@ -10,6 +10,7 @@
 :root {
   --main-blue: #2357e5;
   --black: #111111;
+  --black2: #292929;
   --light-grey-1: #ebebeb;
   --light-grey-2: #dedede;
   --light: #d8dbe0;
@@ -17,11 +18,8 @@
   --dark: #28292c;
   /* menu colors */
   --home: #3a3a3a;
-  --articles: #333333;
   --about-us: #2e2e2e;
-  --contact: #292929;
-  --max-img-width: 600px;
-  --max-img-height: 400px;
+  --contact: #202020;
 }
 
 body {
@@ -137,10 +135,6 @@ header {
 }
 
 .select-menu .options .option:nth-child(3) a {
-  color: var(--about-us);
-}
-
-.select-menu .options .option:nth-child(4) a {
   color: var(--contact);
 }
 
@@ -201,6 +195,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all .3s ease;
 }
 
 /* dark mode */
@@ -302,6 +297,7 @@ header {
   margin: 0 auto;
   background: var(--light-grey-1);
   padding: 20px 0;
+  border-top: 5px solid var(--light-grey-2);
   border-bottom: 5px solid var(--light-grey-2);
 }
 
@@ -364,8 +360,8 @@ main.all-categories {
 
 /* single article */
 main.all-categories .single-article {
-  width: 45%;
-  background-color: white;
+  width: 48%;
+  background: white;
   padding: 10px;
   position: relative;
   margin: 10px;
@@ -538,6 +534,7 @@ main.contact form input,
 main.contact form textarea {
   margin: 15px;
   padding: 5px;
+  background: none;
   font-size: 1rem;
   outline: none;
 }
