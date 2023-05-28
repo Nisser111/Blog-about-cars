@@ -40,3 +40,10 @@ window.onload = () => {
   
   btn.addEventListener("click", () => container.remove() );
 }
+
+// dynamic page title 
+
+if(document.querySelector("main.articles header > h2")) {
+  const articleTitle = document.querySelector("main.articles header > h2");
+  document.title += " " + articleTitle.innerText;
+}
