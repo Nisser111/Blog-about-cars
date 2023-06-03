@@ -156,3 +156,23 @@ switchThemeBtn.addEventListener("click", () => {
     }
   }
 });
+
+// filters category
+let cards = document.querySelectorAll("main.all-categories .single-article");
+let categoryNavBtns = document.querySelector(".category-nav ul");
+
+categoryNavBtns.addEventListener("click", (e) => {
+  console.log(e)
+  if(e.target.localName == "button" || e.target.localName == "li") {
+    let currentCategory = e.target.innerHTML.toLowerCase();
+    cards.forEach((el) => el.classList.remove("hidden"));
+  
+    cards.forEach((el) => {
+      if (el.querySelector(".tags").innerHTML.toLowerCase() != currentCategory)
+        el.classList.add("hidden");
+    });
+  
+    if (currentCategory === "all")
+      cards.forEach((el) => el.classList.remove("hidden"));
+  }
+});
